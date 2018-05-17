@@ -1,10 +1,11 @@
+const path = require('path');
+
 module.exports = [
     {
-      entry: './src/sass/main.sass',
+      entry: './src/app.js',
       output: {
-        // This is necessary for webpack to compile
-        // But we never use style-bundle.js
-        filename: 'style-bundle.js',
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js',
       },
       module: {
         rules: [{
@@ -23,25 +24,16 @@ module.exports = [
               options: {
                 includePaths: ['./node_modules'],
               }
-            },
+            }
           ]
-        }]
-      },
-    },
-    {
-      entry: "./src/app.js",
-      output: {
-        filename: "bundle.js"
-      },
-      module: {
-        loaders: [{
+        },
+        {
           test: /\.js$/,
           loader: 'babel-loader',
           query: {
             presets: ['es2015']
           }
         }]
-      },
+      }
     }
   ];
-  
