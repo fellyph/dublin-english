@@ -24,11 +24,17 @@ module.exports = {
           fallback: 'style-loader',
           use: ['css-loader', 'sass-loader']
         })
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
   plugins: [
     new UglifyJsPlugin(),
-    new ExtractTextPlugin('./dist/main.css')
+    new ExtractTextPlugin('main.css')
   ]
 }
