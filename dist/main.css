@@ -1,12 +1,12 @@
 .top-bar {
   background: #2733b9;
   color: #FFFFFF;
-  padding: 1em;
   display: fixed;
   top: 0; }
   .top-bar__wrap {
     display: flex;
-    justify-content: space-between; }
+    justify-content: space-between;
+    padding: 0.5em; }
   .top-bar__menu {
     display: inline-block;
     padding-top: 0.5em; }
@@ -22,6 +22,13 @@
   .top-bar__site-logo {
     display: inline-block;
     margin: 0; }
+  .top-bar__contact {
+    border-bottom: 1px solid #f4f4f4;
+    text-align: right;
+    padding: 0.3em; }
+    .top-bar__contact a {
+      color: #FFFFFF;
+      text-decoration: none; }
 
 body {
   font-family: 'Roboto', sans-serif;

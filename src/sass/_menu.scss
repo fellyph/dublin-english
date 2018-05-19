@@ -1,13 +1,13 @@
 .top-bar {
   background: $primaryColor;
   color: $secondaryColor;
-  padding: 1em;
   display: fixed;
   top: 0;
 
   &__wrap {
     display: flex;
     justify-content: space-between;
+    padding: 0.5em;
   }
 
   &__menu {
@@ -33,6 +33,17 @@
   &__site-logo{
     display: inline-block;
     margin: 0;
+  }
+
+  &__contact {
+    border-bottom: 1px solid #f4f4f4;
+    text-align: right;
+    padding: 0.3em;
+
+    a {
+      color: $secondaryColor;
+      text-decoration: none;
+    }
   }
 }
 
