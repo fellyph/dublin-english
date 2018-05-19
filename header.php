@@ -7,10 +7,11 @@
   <title>School English</title>
    <!--Import Google Icon Font-->
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
    <?php wp_head(); ?>
  </head>
 </head>
-<body>
+<body class="mdc-typography">
   <header>
     <h1><?php bloginfo('name'); ?></h1>
     <nav>
