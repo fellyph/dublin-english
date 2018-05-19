@@ -7,4 +7,18 @@ function mytheme_styles() {
   wp_enqueue_style( 'mytheme-common', get_template_directory_uri() . '/dist/main.css', array(), date("H:i:s"));
 }
 
+
+function create_post_type() {
+  register_post_type( 'course',
+    array(
+      'labels' => array(
+        'name' => __( 'Course' ),
+        'singular_name' => __( 'Course' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
+}
+add_action( 'init', 'create_post_type' );
 add_action( 'wp_enqueue_scripts', 'mytheme_styles' );

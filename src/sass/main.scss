@@ -1,7 +1,3 @@
-@import "@material/layout-grid/mdc-layout-grid";
-
-.header {
-  &__logo {
-    display: block;
-  }
-}
+@import 'colors';
+@import 'menu';
+@import 'body';

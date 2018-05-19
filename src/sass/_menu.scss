@@ -1,0 +1,38 @@
+.top-bar {
+  background: $primaryColor;
+  color: $secondaryColor;
+  padding: 1em;
+  display: fixed;
+  top: 0;
+
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__menu {
+    display: inline-block;
+    padding-top: 0.5em;
+
+    .page_item {
+      display: inline-block;
+      margin-right: 1em;
+    }
+
+    ul {
+      padding: 0;
+      margin: 0;
+    }
+
+    a {
+      color: $secondaryColor;
+      text-decoration: none;
+    }
+  }
+
+  &__site-logo{
+    display: inline-block;
+    margin: 0;
+  }
+}
+

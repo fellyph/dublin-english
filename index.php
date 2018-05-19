@@ -16,6 +16,4 @@
       <?php endif; ?>
     </div>
   </div>
-
-<!-- Elysian Education : modeltheme -->
 <?php get_footer(); ?>
