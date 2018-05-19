@@ -1,19 +1,23 @@
 <?php get_header(); ?>
-  <section>
-    <h2>Welcome to Dublin English</h2>
-    <h3>Maximum 4 students per class</h3>
+  <section class="banner">
+    <div class="banner__column">
+      <h2 class="banner__title">Welcome to Dublin English</h2>
+      <h3 class="banner_subtitle">Maximum 4 students per class</h3>
+    </div>
+    <div>
+      <form>
+      </form>
+    </div>
   </section>
 
-  <div class="mdc-layout-grid">
-    <div class="mdc-layout-grid__inner">
+  <div class="courses">
       <?php if(have_posts()): ?>
           <?php while(have_posts()):the_post(); ?>
-              <div class="mdc-layout-grid__cell">
-                <h2><?php the_title(); ?></h2>
-                <div class="content"><?php the_content(); ?></div>
+              <div class="course__item">
+                <h2 class="course__item_title"><?php the_title(); ?></h2>
+                <div class="course__item__content"><?php the_content(); ?></div>
               </div>
           <?php endwhile; ?>
       <?php endif; ?>
-    </div>
   </div>
 <?php get_footer(); ?>

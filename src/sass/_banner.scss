@@ -1,0 +1,8 @@
+.banner {
+  display: flex;
+
+  &__column {
+    width: 50%;
+    display: inline-block;
+  }
+}
