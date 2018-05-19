@@ -23,6 +23,6 @@
         <li>Level Test</li>
       </ul>
     </nav>
-    <?php wp_page_nav('main-menu'); ?> 
+    <?php wp_nav_menu('main-menu'); ?>
     <button>Get a quote</button>
   </header>

@@ -1,39 +1,34 @@
-const path = require('path');
+const path = require('path')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-module.exports = [
-    {
-      entry: './src/app.js',
-      output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
-      },
-      module: {
-        rules: [{
-          test: /\.scss$/,
-          use: [
-            {
-              loader: 'file-loader',
-              options: {
-                name: 'bundle.css',
-              },
-            },
-            { loader: 'extract-loader' },
-            { loader: 'css-loader' },
-            {
-              loader: 'sass-loader',
-              options: {
-                includePaths: ['./node_modules'],
-              }
-            }
-          ]
-        },
-        {
-          test: /\.js$/,
+module.exports = {
+  entry: './src/app.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/dist'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
           loader: 'babel-loader',
-          query: {
-            presets: ['es2015']
-          }
-        }]
+          options: { presets: ['es2015'] }
+        }
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
       }
-    }
-  ];
+    ]
+  },
+  plugins: [
+    new UglifyJsPlugin(),
+    new ExtractTextPlugin('./dist/main.css')
+  ]
+}

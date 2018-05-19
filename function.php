@@ -1,2 +1,2 @@
 <?php
-  register_nav_menu( 'primary', __( 'Primary Menu', 'theme-slug' ));
+  register_nav_menu( 'primary', __( 'Primary Menu', 'main-menu' ));
