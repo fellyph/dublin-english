@@ -7,6 +7,7 @@
   <title>School English</title>
    <!--Import Google Icon Font-->
    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <?php wp_head(); ?>
  </head>
 </head>
 <body>

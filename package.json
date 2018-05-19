@@ -4,7 +4,7 @@
   "description": "Project develop to Dublin english",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack --mode development",
+    "dev": "webpack --watch --mode development",
     "build": "webpack --mode production"
   },
   "repository": {
