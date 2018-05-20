@@ -11,13 +11,14 @@
   </section>
 
   <div class="courses">
-      <?php if(have_posts()): ?>
-          <?php while(have_posts()):the_post(); ?>
-              <div class="course__item">
-                <h2 class="course__item_title"><?php the_title(); ?></h2>
-                <div class="course__item__content"><?php the_content(); ?></div>
-              </div>
-          <?php endwhile; ?>
-      <?php endif; ?>
+  <?php
+    $args = array( 'post_type' => 'course', 'posts_per_page' => 10 );
+    $loop = new WP_Query( $args );
+    while ( $loop->have_posts() ) : $loop->the_post(); ?>
+      <div class="course__item">
+        <h2 class="course__item_title"><?php the_title(); ?></h2>
+        <div class="course__item__content"><?php the_content(); ?></div>
+      </div>
+    <?php endwhile; ?>
   </div>
 <?php get_footer(); ?>

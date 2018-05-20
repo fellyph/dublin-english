@@ -23,4 +23,4 @@ function create_post_type() {
 
 add_action( 'init', 'create_post_type' );
 add_action( 'wp_enqueue_scripts', 'mytheme_styles' );
-add_theme_support('post-thumbnails');
+add_theme_support('post-thumbnails', array('post', 'page', 'course'));
