@@ -22,7 +22,8 @@
       margin: 0; }
   .top-bar__site-logo {
     display: inline-block;
-    margin: 0; }
+    margin: 0;
+    font-family: 'Signika', sans-serif; }
   .top-bar__contact {
     border-bottom: 1px solid #f4f4f4;
     text-align: right;
@@ -51,7 +52,6 @@ body {
 
 .banner {
   display: flex;
-  background: url(/dist22e261a5d6dc6780c491fb0ecc049c7b.jpg);
   min-height: 400px;
   background: #2733b9;
   color: #FFFFFF;
@@ -70,6 +70,7 @@ body {
       margin-top: 1em;
       display: inline-block; }
   .banner__title {
+    font-family: 'Signika', sans-serif;
     color: #FFFFFF;
     font-size: 3em;
     text-shadow: 2px 2px 2px #333;
@@ -90,7 +91,8 @@ body {
   padding: 2em 1em; }
   .courses__title {
     text-align: center;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    font-family: 'Signika', sans-serif; }
     .courses__title:after {
       content: '';
       background: #f44336;
@@ -118,6 +120,8 @@ body {
   .courseCard__title {
     margin: 0 0 0.3em 0;
     border-bottom: 1px solid #f44336;
-    padding-bottom: 0.5em; }
+    padding-bottom: 0.5em;
+    font-size: 1.2em;
+    font-family: 'Signika', sans-serif; }
   .courseCard__info {
     padding: 1em; }

@@ -1,6 +1,5 @@
 .banner {
   display: flex;
-  background: url('../imgs/rawpixel-668353-unsplash.jpg');
   min-height: 400px;
   background: $primaryColor;
   color: $secondaryTextColor;
@@ -26,6 +25,7 @@
   }
 
   &__title {
+    font-family: 'Signika', sans-serif;
     color: $secondaryTextColor;
     font-size: 3em;
     text-shadow: 2px 2px 2px #333;
