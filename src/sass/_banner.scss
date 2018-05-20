@@ -1,6 +1,8 @@
 .banner {
   display: flex;
-
+  background: url('../imgs/rawpixel-668353-unsplash.jpg');
+  min-height: 400px;
+  
   &__column {
     width: 50%;
     display: inline-block;

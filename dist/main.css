@@ -3,10 +3,13 @@
   color: #FFFFFF;
   display: fixed;
   top: 0; }
+  .top-bar a {
+    color: #FFFFFF;
+    text-decoration: none; }
   .top-bar__wrap {
     display: flex;
     justify-content: space-between;
-    padding: 0.5em; }
+    padding: 0.5em 0.5em 1em 1em; }
   .top-bar__menu {
     display: inline-block;
     padding-top: 0.5em; }
@@ -16,9 +19,6 @@
     .top-bar__menu ul {
       padding: 0;
       margin: 0; }
-    .top-bar__menu a {
-      color: #FFFFFF;
-      text-decoration: none; }
   .top-bar__site-logo {
     display: inline-block;
     margin: 0; }
@@ -26,10 +26,26 @@
     border-bottom: 1px solid #f4f4f4;
     text-align: right;
     padding: 0.3em; }
-    .top-bar__contact a {
-      color: #FFFFFF;
-      text-decoration: none; }
 
 body {
   font-family: 'Roboto', sans-serif;
   color: #9B9B9B; }
+
+.footer {
+  background: #f44336;
+  color: #FFFFFF;
+  padding: 1em; }
+
+.banner {
+  display: flex;
+  background: url(/dist22e261a5d6dc6780c491fb0ecc049c7b.jpg);
+  min-height: 400px; }
+  .banner__column {
+    width: 50%;
+    display: inline-block; }
+
+.courses {
+  max-width: 100%;
+  width: 1024px;
+  margin: 0 auto;
+  padding: 2em 0; }

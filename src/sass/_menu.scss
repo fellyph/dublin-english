@@ -1,13 +1,18 @@
 .top-bar {
   background: $primaryColor;
-  color: $secondaryColor;
+  color: $secondaryTextColor;
   display: fixed;
   top: 0;
+
+  a {
+    color: $secondaryTextColor;
+    text-decoration: none;
+  }
 
   &__wrap {
     display: flex;
     justify-content: space-between;
-    padding: 0.5em;
+    padding: 0.5em 0.5em 1em 1em;
   }
 
   &__menu {
@@ -23,11 +28,6 @@
       padding: 0;
       margin: 0;
     }
-
-    a {
-      color: $secondaryColor;
-      text-decoration: none;
-    }
   }
 
   &__site-logo{
@@ -39,11 +39,6 @@
     border-bottom: 1px solid #f4f4f4;
     text-align: right;
     padding: 0.3em;
-
-    a {
-      color: $secondaryColor;
-      text-decoration: none;
-    }
   }
 }
 

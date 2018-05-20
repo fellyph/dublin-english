@@ -6,7 +6,7 @@
 /*!************************!*\
   !*** ./src/js/main.js ***!
   \************************/
-/*! no static exports found */function(module,exports,__webpack_require__){"use strict";eval("\n\nalert('oi');\n\n//# sourceURL=webpack:///./src/js/main.js?")},"./src/sass/main.scss":
+/*! no static exports found */function(module,exports,__webpack_require__){"use strict";eval("\n\n//# sourceURL=webpack:///./src/js/main.js?")},"./src/sass/main.scss":
 /*!****************************!*\
   !*** ./src/sass/main.scss ***!
   \****************************/
