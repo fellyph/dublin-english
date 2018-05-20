@@ -1,3 +1,7 @@
+div, body, article, section, ul, nav, header, footer {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   color: $textColor;

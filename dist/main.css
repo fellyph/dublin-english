@@ -27,6 +27,9 @@
     text-align: right;
     padding: 0.3em; }
 
+div, body, article, section, ul, nav, header, footer {
+  box-sizing: border-box; }
+
 body {
   font-family: 'Roboto', sans-serif;
   color: #9B9B9B; }
@@ -48,4 +51,4 @@ body {
   max-width: 100%;
   width: 1024px;
   margin: 0 auto;
-  padding: 2em 0; }
+  padding: 2em 1em; }
