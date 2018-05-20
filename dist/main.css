@@ -90,7 +90,8 @@ body {
   max-width: 100%;
   width: 1024px;
   margin: 0 auto;
-  padding: 2em 1em; }
+  padding: 2em 1em;
+  text-align: center; }
   .courses__title {
     text-align: center;
     text-transform: uppercase;
@@ -124,6 +125,10 @@ body {
     border-bottom: 1px solid #f44336;
     padding-bottom: 0.5em;
     font-size: 1.2em;
-    font-family: 'Signika', sans-serif; }
+    font-family: 'Signika', sans-serif;
+    text-align: center; }
   .courseCard__info {
     padding: 1em; }
+  .courseCard .btn {
+    display: inline-block;
+    margin: 1em 0; }
