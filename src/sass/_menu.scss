@@ -3,6 +3,7 @@
   color: $secondaryTextColor;
   display: fixed;
   top: 0;
+  border-bottom: 3px solid #f4f4f4;
 
   a {
     color: $secondaryTextColor;
@@ -12,7 +13,7 @@
   &__wrap {
     display: flex;
     justify-content: space-between;
-    padding: 0.5em 0.5em 1em 1em;
+    padding: 0.8em 0.5em 0.8em 1em;
   }
 
   &__menu {
@@ -38,7 +39,7 @@
   &__contact {
     border-bottom: 1px solid #f4f4f4;
     text-align: right;
-    padding: 0.3em;
+    padding: 0.3em 1.3em 0.3em 0.3em;
   }
 }
 

@@ -4,6 +4,7 @@
   </figure>
   <div class="courseCard__info">
     <h2 class="courseCard__title"><?php the_title(); ?></h2>
-    <div class="courseCard__content"><?php the_excerpt(); ?></div>
+    <div class="courseCard__content"><?php the_content(); ?></div>
+    <a href="/contact" class="btn">Get a quote</a>
   </div>
 </article>

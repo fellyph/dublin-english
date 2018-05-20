@@ -2,14 +2,15 @@
   background: #2733b9;
   color: #FFFFFF;
   display: fixed;
-  top: 0; }
+  top: 0;
+  border-bottom: 3px solid #f4f4f4; }
   .top-bar a {
     color: #FFFFFF;
     text-decoration: none; }
   .top-bar__wrap {
     display: flex;
     justify-content: space-between;
-    padding: 0.5em 0.5em 1em 1em; }
+    padding: 0.8em 0.5em 0.8em 1em; }
   .top-bar__menu {
     display: inline-block;
     padding-top: 0.5em; }
@@ -25,7 +26,7 @@
   .top-bar__contact {
     border-bottom: 1px solid #f4f4f4;
     text-align: right;
-    padding: 0.3em; }
+    padding: 0.3em 1.3em 0.3em 0.3em; }
 
 div, body, article, section, ul, nav, header, footer {
   box-sizing: border-box; }
@@ -33,6 +34,15 @@ div, body, article, section, ul, nav, header, footer {
 body {
   font-family: 'Roboto', sans-serif;
   color: #777; }
+
+.btn {
+  background: #f44336;
+  color: #FFFFFF;
+  padding: 1em 3em;
+  border-radius: 5px;
+  text-decoration: none; }
+  .btn:hover {
+    background: #2733b9; }
 
 .footer {
   background: #f44336;
@@ -42,10 +52,36 @@ body {
 .banner {
   display: flex;
   background: url(/dist22e261a5d6dc6780c491fb0ecc049c7b.jpg);
-  min-height: 400px; }
+  min-height: 400px;
+  background: #2733b9;
+  color: #FFFFFF;
+  position: relative;
+  background-position: top center; }
   .banner__column {
     width: 50%;
     display: inline-block; }
+  .banner__item {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%); }
+    .banner__item .btn {
+      margin-top: 1em;
+      display: inline-block; }
+  .banner__title {
+    color: #FFFFFF;
+    font-size: 3em;
+    text-shadow: 2px 2px 2px #333;
+    margin: 0 0 0.5em 0; }
+    .banner__title:after {
+      content: '';
+      background: #f44336;
+      display: block;
+      width: 70px;
+      height: 5px;
+      border-radius: 3px;
+      margin: 5px auto; }
 
 .courses {
   max-width: 100%;
@@ -70,7 +106,8 @@ body {
 .courseCard {
   width: 33%;
   border: 1px solid #b1b1b1;
-  margin: 1em; }
+  margin: 1em;
+  border-radius: 5px; }
   .courseCard__thumbnail {
     margin: 0;
     padding: 0;

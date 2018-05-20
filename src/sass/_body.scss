@@ -6,3 +6,15 @@ body {
   font-family: 'Roboto', sans-serif;
   color: $textColor;
 }
+
+.btn {
+  background: $secondaryColor;
+  color: $secondaryTextColor;
+  padding: 1em 3em;
+  border-radius: 5px;
+  text-decoration: none;
+
+  &:hover {
+    background: $primaryColor;
+  }
+}

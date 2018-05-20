@@ -2,9 +2,43 @@
   display: flex;
   background: url('../imgs/rawpixel-668353-unsplash.jpg');
   min-height: 400px;
-  
+  background: $primaryColor;
+  color: $secondaryTextColor;
+  position: relative;
+  background-position: top center;
+
   &__column {
     width: 50%;
     display: inline-block;
+  }
+
+  &__item {
+    position: absolute;
+    bottom: 50px;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .btn {
+      margin-top: 1em;
+      display: inline-block;
+    }
+  }
+
+  &__title {
+    color: $secondaryTextColor;
+    font-size: 3em;
+    text-shadow: 2px 2px 2px #333;
+    margin: 0 0 0.5em 0;
+
+    &:after {
+      content: '';
+      background: $secondaryColor;
+      display: block;
+      width: 70px;
+      height: 5px;
+      border-radius: 3px;
+      margin: 5px auto;
+    }
   }
 }
