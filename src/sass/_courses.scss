@@ -1,14 +1,51 @@
-.coursesList {
-  display: flex;
+.courses {
   max-width: 100%;
   width: 1024px;
   margin: 0 auto;
   padding: 2em 1em;
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+
+    &:after {
+      content: '';
+      background: $secondaryColor;
+      display: block;
+      width: 50px;
+      height: 5px;
+      border-radius: 3px;
+      margin: 3px auto;
+    }
+  }
+}
+
+.coursesList {
+  display: flex;
 }
 
 .courseCard {
   width: 33%;
   border: 1px solid $borderColor;
   margin: 1em;
-  padding: 1em;
+
+  &__thumbnail {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    margin: 0 0 0.3em 0;
+    border-bottom: 1px solid $secondaryColor;
+    padding-bottom: 0.5em;
+  }
+
+  &__info {
+    padding: 1em;
+  }
 }

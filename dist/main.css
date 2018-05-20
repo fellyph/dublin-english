@@ -47,15 +47,40 @@ body {
     width: 50%;
     display: inline-block; }
 
-.coursesList {
-  display: flex;
+.courses {
   max-width: 100%;
   width: 1024px;
   margin: 0 auto;
   padding: 2em 1em; }
+  .courses__title {
+    text-align: center;
+    text-transform: uppercase; }
+    .courses__title:after {
+      content: '';
+      background: #f44336;
+      display: block;
+      width: 50px;
+      height: 5px;
+      border-radius: 3px;
+      margin: 3px auto; }
+
+.coursesList {
+  display: flex; }
 
 .courseCard {
   width: 33%;
   border: 1px solid #b1b1b1;
-  margin: 1em;
-  padding: 1em; }
+  margin: 1em; }
+  .courseCard__thumbnail {
+    margin: 0;
+    padding: 0;
+    font-size: 0; }
+    .courseCard__thumbnail img {
+      max-width: 100%;
+      height: auto; }
+  .courseCard__title {
+    margin: 0 0 0.3em 0;
+    border-bottom: 1px solid #f44336;
+    padding-bottom: 0.5em; }
+  .courseCard__info {
+    padding: 1em; }
