@@ -17,7 +17,7 @@ function create_post_type() {
       ),
       'public' => true,
       'has_archive' => true,
-      'supports' => array ('thumbnail', 'excerpt')
+      'supports' => array ( 'title', 'editor', 'author', 'thumbnail', 'excerpt')
     )
   );
 }
@@ -25,3 +25,6 @@ function create_post_type() {
 add_action( 'init', 'create_post_type' );
 add_action( 'wp_enqueue_scripts', 'mytheme_styles' );
 add_theme_support('post-thumbnails');
+
+add_image_size( 'card-size', 520, 400, true );
+add_image_size( 'banner-size', 9999, 400, true );

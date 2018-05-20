@@ -32,7 +32,7 @@ div, body, article, section, ul, nav, header, footer {
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #9B9B9B; }
+  color: #777; }
 
 .footer {
   background: #f44336;
@@ -47,8 +47,15 @@ body {
     width: 50%;
     display: inline-block; }
 
-.courses {
+.coursesList {
+  display: flex;
   max-width: 100%;
   width: 1024px;
   margin: 0 auto;
   padding: 2em 1em; }
+
+.courseCard {
+  width: 33%;
+  border: 1px solid #b1b1b1;
+  margin: 1em;
+  padding: 1em; }

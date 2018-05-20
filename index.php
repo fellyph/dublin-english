@@ -10,7 +10,7 @@
     </div>
   </section>
 
-  <div class="courses">
+  <div class="coursesList">
   <?php
     $args = array( 'post_type' => 'course', 'posts_per_page' => 10 );
     $loop = new WP_Query( $args );
