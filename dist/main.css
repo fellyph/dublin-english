@@ -6,7 +6,9 @@
   border-bottom: 3px solid #f4f4f4; }
   .top-bar a {
     color: #FFFFFF;
-    text-decoration: none; }
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.07em; }
   .top-bar__wrap {
     display: flex;
     justify-content: space-between;

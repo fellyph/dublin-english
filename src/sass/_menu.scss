@@ -8,6 +8,8 @@
   a {
     color: $secondaryTextColor;
     text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
   }
 
   &__wrap {
