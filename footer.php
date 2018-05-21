@@ -1,9 +1,9 @@
   <footer class="footer">
     <div class="footer__widget footer__address">
       <h3>Contact</h3>
-      <p>Dublin, Ireland</p>
-      <p>test@dublin.school</p>
-      <p>99 999 9999</p>
+      <p><a href="geo:53.3488143,-6.2630998?q=53.3488143,-6.2630998(Dublin English School)">Dublin, Ireland</a></p>
+      <p><a href="mailto:test@dublin.school">test@dublin.school</a></p>
+      <p><a href="tel:999999999">99 999 9999</a></p>
     </div>
     Dublin English School
     <div class="footer__widget footer__links">
