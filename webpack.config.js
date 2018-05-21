@@ -1,6 +1,8 @@
 const path = require('path')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const CleanPlugin = require('clean-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 
 module.exports = {
   entry: './src/app.js',
@@ -34,7 +36,13 @@ module.exports = {
     ]
   },
   plugins: [
+    new CleanPlugin(['dist']),
     new UglifyJsPlugin(),
-    new ExtractTextPlugin('main.css')
+    new ExtractTextPlugin('main.css'),
+    new WorkboxPlugin.GenerateSW({
+      swDest: 'sw.js',
+      clientsClaim: true,
+      skipWaiting: true
+    })
   ]
 }
