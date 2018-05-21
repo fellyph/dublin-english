@@ -6,23 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>School English</title>
    <!--Import Google Icon Font-->
-   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-   <!--Import materialize.css-->
-   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+   <?php wp_head(); ?>
  </head>
 </head>
-<body>
-  <header>
-    <h1><?php bloginfo('name'); ?></h1>
-    <nav>
-      <ul>
-        <li>home</li>
-        <li>Course</li>
-        <li>Accommodation</li>
-        <li>About</li>
-        <li>Level Test</li>
-      </ul>
-    </nav>
-    <?php wp_page_nav('main-menu'); ?> 
-    <button>Get a quote</button>
+<body <?php body_class(); ?>>
+  <header class="top-bar">
+    <div class="top-bar__contact">
+      <a href="tel:999999999">99 999 9999</a>
+    </div>
+    <div class="top-bar__wrap">
+      <h1 class="top-bar__site-logo"><?php bloginfo('name'); ?></h1>
+      <?php wp_nav_menu(array(
+            'theme_location' => 'main-menu',
+            'menu_class' => 'top-bar__menu') ); ?>
+    </div>
   </header>

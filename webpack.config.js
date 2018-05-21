@@ -1,45 +1,40 @@
-const path = require('path');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+const path = require('path')
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
-module.exports =
-  {
-    entry: './src/app.js',
-    output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: 'bundle.js',
-    },
-    module: {
-      rules: [
-        {
-          test: /\.scss$/,
-          use: [{
-              loader: "style-loader"
-          }, {
-              loader: "css-loader", options: {
-                  sourceMap: true
-              }
-          }, {
-              loader: "sass-loader", options: {
-                  sourceMap: true
-              }
-          }]
-        },
-        {
-          test: /\.css$/,
-          use: [ 'style-loader', 'css-loader' ]
-        },
-        {
-          test: /\.js$/,
-          exclude: /(node_modules|bower_components)/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['babel-preset-env']
-            }
-          }
-        }]
-    },
-    plugins : [
-      new UglifyJsPlugin()
+module.exports = {
+  entry: './src/app.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js',
+    publicPath: '/dist'
+  },
+  module: {
+    rules: [
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: { presets: ['es2015'] }
+        }
+      },
+      {
+        test: /\.scss$/,
+        use: ExtractTextPlugin.extract({
+          fallback: 'style-loader',
+          use: ['css-loader', 'sass-loader']
+        })
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader'
+        ]
+      }
     ]
-  };
+  },
+  plugins: [
+    new UglifyJsPlugin(),
+    new ExtractTextPlugin('main.css')
+  ]
+}

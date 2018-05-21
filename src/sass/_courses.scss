@@ -1,0 +1,62 @@
+.courses {
+  max-width: 100%;
+  width: 1024px;
+  margin: 0 auto;
+  padding: 2em 1em;
+  text-align: center;
+
+  &__title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Signika', sans-serif;
+
+    &:after {
+      content: '';
+      background: $secondaryColor;
+      display: block;
+      width: 50px;
+      height: 5px;
+      border-radius: 3px;
+      margin: 3px auto;
+    }
+  }
+}
+
+.coursesList {
+  display: flex;
+}
+
+.courseCard {
+  width: 33%;
+  border: 1px solid $borderColor;
+  margin: 1em;
+  border-radius: 5px;
+
+  &__thumbnail {
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  &__title {
+    margin: 0 0 0.3em 0;
+    border-bottom: 1px solid $secondaryColor;
+    padding-bottom: 0.5em;
+    font-size: 1.2em;
+    font-family: 'Signika', sans-serif;
+    text-align: center;
+  }
+
+  &__info {
+    padding: 1em;
+  }
+
+  .btn {
+    display: inline-block;
+    margin: 1em 0;
+  }
+}

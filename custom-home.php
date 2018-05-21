@@ -1,14 +1,13 @@
-<?php get_header(); ?>
-  <section class="banner">
-    <div class="banner__column">
-      <h2 class="banner__title">Welcome to Dublin English</h2>
-      <h3 class="banner_subtitle">Maximum 4 students per class</h3>
-    </div>
-    <div>
-      <form>
-      </form>
-    </div>
-  </section>
+<?php
+/*
+  Template Name: Home Dublin school
+*/
+get_header(); ?>
+  <?php
+    while ( have_posts() ) : the_post();
+      get_template_part( 'templates/slide', 'banner' );
+    endwhile;
+  ?>
   <section class="courses">
     <h2 class="courses__title">Our Courses</h2>
     <div class="coursesList">
