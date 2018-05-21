@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>School English</title>
+   <!--Import Google Icon Font-->
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <!--Import materialize.css-->
+   <link type="text/css" rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"  media="screen,projection"/>
+   <link type="text/css" rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"  media="screen,projection"/>
+
+ </head>
+</head>
+<body>
+
+<header class="mdc-top-app-bar">
+  <div class="mdc-top-app-bar__row">
+    <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
+      <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">Course</a>
+      <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">Accommodation</a>
+      <a href="#" class="material-icons mdc-top-app-bar__navigation-icon">About</a>
+      <span class="mdc-top-app-bar__title"><?php bloginfo('name'); ?></span>
+    </section>
+  </div>
+</header>
+
+  <header>
+    <?php wp_page_nav('main-menu'); ?>
+    <button>Get a quote</button>
+  </header>
+  <section>
+    <h2>Welcome to Dublin English</h2>
+    <h3>Maximum 4 students per class</h3>
+  </section>
+  <section class="mdc-layout-grid">
+  <div class="mdc-layout-grid__inner">
+    <div class="mdc-layout-grid__cell">
+      <div class="mdc-card">
+        Card 1
+      </div>
+    </div>
+    <div class="mdc-layout-grid__cell">
+    <div class="mdc-card">
+        Card 2
+      </div>
+    </div>
+    <div class="mdc-layout-grid__cell">
+    <div class="mdc-card">
+        Card 3
+      </div>
+    </div>
+  </div>
+  </section>
+<!-- Elysian Education : modeltheme -->
+<footer>
+    Dublin English School
+  </footer>
+</body>
+</html>
