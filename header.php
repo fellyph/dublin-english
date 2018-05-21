@@ -9,6 +9,19 @@
    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
+  <link rel="manifest" href="<?php echo pwa_theme_get_manifest_path(); ?>">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="<?php bloginfo('name'); ?>">
+  <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
+  <meta name="theme-color" content="#FFF8F7">
+  <meta name="msapplication-navbutton-color" content="#FFF8F7">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="msapplication-starturl" content="/">
+  <link rel="icon" type="image/jpeg" sizes="512x512" href="<?php echo bloginfo('template_url'); ?>/images/icon.png">
+  <link rel="apple-touch-icon" type="image/jpeg" sizes="512x512" href="<?php echo bloginfo('template_url'); ?>/images/icon.png">
+
    <?php wp_head(); ?>
  </head>
 </head>
