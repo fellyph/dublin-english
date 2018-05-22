@@ -132,3 +132,22 @@ body {
   .courseCard .btn {
     display: inline-block;
     margin: 1em 0; }
+
+.post__item {
+  margin: 2em auto;
+  max-width: 100%;
+  width: 870px; }
+
+.post__title {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Signika', sans-serif;
+  margin-bottom: 1em; }
+  .post__title:after {
+    content: '';
+    background: #f44336;
+    display: block;
+    width: 50px;
+    height: 5px;
+    border-radius: 3px;
+    margin: 3px auto; }

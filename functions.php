@@ -1,5 +1,10 @@
 <?php
 
+//add theme support
+add_theme_support('post-thumbnails');
+add_theme_support( 'custom-background', array('default-color' => 'f3f3f3'));
+
+
 register_nav_menu( 'primary', __( 'Primary Menu', 'main-menu' ));
 
 function mytheme_styles() {
@@ -23,7 +28,6 @@ function create_post_type() {
 
 add_action( 'init', 'create_post_type' );
 add_action( 'wp_enqueue_scripts', 'mytheme_styles' );
-add_theme_support('post-thumbnails');
 
 add_image_size( 'card-size', 520, 400, true );
 add_image_size( 'banner-size', 9999, 400, true );
@@ -86,11 +90,5 @@ function pwa_theme_render_custom_assets() {
 add_action( 'template_redirect', 'pwa_theme_render_custom_assets', 2 );
 
 function pwa_theme_get_theme_color() {
-   // if we have AMP enabled, use those colors?
-  if ( current_theme_supports( 'custom-background' ) ) {
-    $theme_color = get_theme_support( 'custom-background' )->{'default-color'};
-  } else {
-    $theme_color = '#FFF';
-  }
-  return apply_filters( 'pwa_theme_background_color', $theme_color );
+  return '#'.get_background_color();
 }
