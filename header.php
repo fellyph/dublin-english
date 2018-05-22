@@ -17,11 +17,11 @@
   <meta name="application-name" content="<?php bloginfo('name'); ?>">
   <meta name="apple-mobile-web-app-title" content="<?php bloginfo('name'); ?>">
   <meta name="theme-color" content="<?php echo pwa_theme_get_theme_color(); ?>">
-  <meta name="msapplication-navbutton-color" content="#FFF8F7">
+  <meta name="msapplication-navbutton-color" content="<?php echo pwa_theme_get_theme_color(); ?>">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="msapplication-starturl" content="/">
-  <link rel="icon" type="image/jpeg" sizes="512x512" href="<?php echo bloginfo('template_url'); ?>/images/icon.png">
-  <link rel="apple-touch-icon" type="image/jpeg" sizes="512x512" href="<?php echo bloginfo('template_url'); ?>/images/icon.png">
+  <link rel="icon" type="image/jpeg" sizes="512x512" href="<?php echo get_site_icon_url( 512 ) ?>">
+  <link rel="apple-touch-icon" type="image/jpeg" sizes="512x512" href="<?php echo get_site_icon_url( 512 ) ?>">
 
    <?php wp_head(); ?>
  </head>
