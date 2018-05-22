@@ -28,11 +28,14 @@ add_theme_support('post-thumbnails');
 add_image_size( 'card-size', 520, 400, true );
 add_image_size( 'banner-size', 9999, 400, true );
 
+function prefix_custom_site_icon_size( $sizes ) {
+  $sizes[] = 48;
+  return $sizes;
+}
+add_filter( 'site_icon_image_sizes', 'prefix_custom_site_icon_size' );
 
 /*
- *
- * 
- * 
+ * PWA Functions
  */
 define( 'PWA_THEME_MANIFEST_ARG', 'jetpack_app_manifest' );
 
@@ -42,12 +45,11 @@ function pwa_theme_get_manifest_path() {
 }
 
 function pwa_theme_register_query_vars( $vars ) {
-  // $vars[] = PWA_SW_QUERY_VAR;
   $vars[] = PWA_THEME_MANIFEST_ARG;
   return $vars;
 }
-add_filter( 'query_vars', 'pwa_theme_register_query_vars' );
 
+add_filter( 'query_vars', 'pwa_theme_register_query_vars' );
 
 function pwa_theme_render_custom_assets() {
   global $wp_query;
@@ -63,24 +65,20 @@ function pwa_theme_render_custom_assets() {
         'theme_color' => $theme_color,
     );
 
-    $icon_48 = pwa_site_icon_url( 48 );
-
-    if ( $icon_48 ) {
-        $manifest[ 'icons' ] = array(
-            array(
-                'src' => $icon_48,
-                'sizes' => '48x48'
-            ),
-            array(
-                'src' => pwa_site_icon_url( 192 ),
-                'sizes' => '192x192'
-            ),
-            array(
-                'src' => pwa_site_icon_url( 512 ),
-                'sizes' => '512x512'
-            )
-        );
-    }
+    $manifest[ 'icons' ] = array(
+        array(
+            'src' => get_site_icon_url( 48 ),
+            'sizes' => '48x48'
+        ),
+        array(
+            'src' => get_site_icon_url( 192 ),
+            'sizes' => '192x192'
+        ),
+        array(
+            'src' => get_site_icon_url( 512 ),
+            'sizes' => '512x512'
+        )
+    );
 
     wp_send_json( $manifest );
   }
@@ -95,11 +93,4 @@ function pwa_theme_get_theme_color() {
     $theme_color = '#FFF';
   }
   return apply_filters( 'pwa_theme_background_color', $theme_color );
-}
-
-function pwa_site_icon_url( $size ) {
-  $url =  get_site_icon_url( $size );
-  if ( ! $url ) {
-    return sprintf('%s/images/icon.png', get_template_directory_uri());
-  }
 }
