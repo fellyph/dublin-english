@@ -9,16 +9,12 @@ register_nav_menu( 'primary', __( 'Primary Menu', 'main-menu' ));
 
 function mytheme_styles() {
   wp_enqueue_style( 'mytheme_common', get_template_directory_uri() . '/dist/main.css', array(), date("H:i:s"));
-  wp_enqueue_script( 'script_bundle', get_template_directory_uri() . '/dist/bundle.js', array(), '1.0.0', true );
+  wp_enqueue_script( 'script_bundle', get_template_directory_uri() . '/dist/bundle.js', array(), '1.1.0', true );
+  wp_localize_script( 'script_bundle', '_template_urls', array(
+    'templateUrl' => get_bloginfo('template_url'),
+    'baseUrl' => home_url()
+  ));
 }
-
-//passing data to javascript
-$translation_array = array(
-  'templateUrl' => get_bloginfo('template_url'),
-  'baseUrl' => home_url()
-);
-
-wp_localize_script( 'script_bundle', '_template_urls', $translation_array );
 
 function create_post_type() {
   register_post_type( 'course',

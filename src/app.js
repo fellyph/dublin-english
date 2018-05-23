@@ -1,4 +1,6 @@
 import './sass/main.scss'
-import './js/main.js'
-import './js/sw.js'
 import './js/checkConnection.js'
+import Main from './js/main.js'
+
+const mainApp = new Main()
+mainApp.init()

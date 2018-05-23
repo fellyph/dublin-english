@@ -9,6 +9,7 @@
    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Signika" rel="stylesheet">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
+
   <!-- PWA metadata -->
   <link rel="manifest" href="<?php echo pwa_theme_get_manifest_path(); ?>">
 
