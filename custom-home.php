@@ -2,6 +2,7 @@
 /*
   Template Name: Home Dublin school
 */
+
 get_header(); ?>
   <?php
     while ( have_posts() ) : the_post();

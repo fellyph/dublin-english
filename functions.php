@@ -33,20 +33,22 @@ function create_post_type() {
 add_action( 'init', 'create_post_type' );
 add_action( 'wp_enqueue_scripts', 'mytheme_styles' );
 
-add_image_size( 'card-size', 520, 400, true );
-add_image_size( 'banner-size', 9999, 400, true );
+//add images sizes
+add_image_size( 'card-size', 450, 300, true );
+add_image_size( 'banner-size', 1600, 400, true );
 
+//creating icon size
 function prefix_custom_site_icon_size( $sizes ) {
   $sizes[] = 48;
   return $sizes;
 }
 add_filter( 'site_icon_image_sizes', 'prefix_custom_site_icon_size' );
 
+
 /*
  * PWA Functions
  */
 define( 'PWA_THEME_MANIFEST_ARG', 'jetpack_app_manifest' );
-
 
 function pwa_theme_get_manifest_path() {
   return add_query_arg( PWA_THEME_MANIFEST_ARG, '1', site_url() );
