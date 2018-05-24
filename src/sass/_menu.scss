@@ -1,7 +1,8 @@
 .top-bar {
   background: $primaryColor;
   color: $secondaryTextColor;
-  display: fixed;
+  position: sticky;
+  z-index: 100;
   top: 0;
   border-bottom: 3px solid #f4f4f4;
 
@@ -13,23 +14,33 @@
   }
 
   &__wrap {
+    padding: 0.8em 0.5em 0.8em 1em;
     display: flex;
     justify-content: space-between;
-    padding: 0.8em 0.5em 0.8em 1em;
   }
 
   &__menu {
-    display: inline-block;
-    padding-top: 0.5em;
+    position: absolute;
+    width: 300px;
+    margin: -100px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    background: $secondaryColor;
+    list-style-type: none;
+    -webkit-font-smoothing: antialiased;
+    /* to stop flickering of text in safari */
+    transform-origin: 0% 0%;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 
     .page_item {
-      display: inline-block;
-      margin-right: 1em;
+      padding: 10px 0;
+      font-size: 22px;
     }
 
-    ul {
-      padding: 0;
-      margin: 0;
+    #menuToggle input:checked ~ &
+    {
+      transform: none;
     }
   }
 
@@ -44,5 +55,67 @@
     text-align: right;
     padding: 0.3em 1.3em 0.3em 0.3em;
   }
+
+  @include desktop {
+    position: relative;
+  }
 }
 
+ #menuToggle
+ {
+   display: block;
+   position: relative;
+   top: 0;
+   left: 0;
+   z-index: 1;
+   -webkit-user-select: none;
+   user-select: none;
+
+   input {
+      display: block;
+      width: 40px;
+      height: 32px;
+      position: absolute;
+      top: -7px;
+      left: -5px;
+      cursor: pointer;
+      opacity: 0; /* hide this */
+      z-index: 2; /* and place it over the hamburger */
+      -webkit-touch-callout: none;
+    }
+
+    span {
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background: #cdcdcd;
+      border-radius: 3px;
+      z-index: 1;
+      transform-origin: 4px 0px;
+      transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+                  opacity 0.55s ease;
+    }
+    span:first-child {
+      transform-origin: 0% 0%;
+    }
+    span:nth-last-child(2) {
+      transform-origin: 0% 100%;
+    }
+    input:checked ~ span {
+      opacity: 1;
+      transform: rotate(45deg) translate(-2px, -1px);
+      background: #232323;
+    }
+
+    input:checked ~ span:nth-last-child(3) {
+      opacity: 0;
+      transform: rotate(0deg) scale(0.2, 0.2);
+    }
+
+    input:checked ~ span:nth-last-child(2) {
+      transform: rotate(-45deg) translate(0, -1px);
+    }
+ }

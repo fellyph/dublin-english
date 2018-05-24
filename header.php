@@ -32,10 +32,22 @@
     <div class="top-bar__contact">
       <a href="tel:999999999">99 999 9999</a>
     </div>
+
     <div class="top-bar__wrap">
+      <nav role="navigation">
+        <div id="menuToggle">
+
+          <input type="checkbox" />
+
+          <span></span>
+          <span></span>
+          <span></span>
+
+          <?php wp_nav_menu(array(
+              'theme_location' => 'main-menu',
+              'menu_class' => 'top-bar__menu') ); ?>
+        </div>
+      </nav>
       <h1 class="top-bar__site-logo"><?php bloginfo('name'); ?></h1>
-      <?php wp_nav_menu(array(
-            'theme_location' => 'main-menu',
-            'menu_class' => 'top-bar__menu') ); ?>
     </div>
   </header>
