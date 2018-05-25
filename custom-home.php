@@ -9,7 +9,7 @@ get_header(); ?>
       get_template_part( 'templates/slide', 'banner' );
     endwhile;
   ?>
-  <section class="courses">
+  <section class="courses container">
     <h2 class="courses__title">Our Courses</h2>
     <div class="coursesList">
     <?php

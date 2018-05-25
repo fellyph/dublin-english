@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-  <section class="posts">
+  <section class="posts container">
     <div class="post__list">
     <?php
       while ( have_posts() ) : the_post();

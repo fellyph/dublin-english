@@ -2,7 +2,7 @@
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/*! no static exports found */function(module,exports,__webpack_require__){"use strict";eval('\n\n__webpack_require__(/*! ./sass/main.scss */ "./src/sass/main.scss");\n\n__webpack_require__(/*! ./js/checkConnection.js */ "./src/js/checkConnection.js");\n\nvar _main = __webpack_require__(/*! ./js/main.js */ "./src/js/main.js");\n\nvar _main2 = _interopRequireDefault(_main);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar mainApp = new _main2.default();\nmainApp.init();\n\n//# sourceURL=webpack:///./src/app.js?')},"./src/js/checkConnection.js":
+/*! no static exports found */function(module,exports,__webpack_require__){"use strict";eval('\n\n__webpack_require__(/*! ./sass/main.scss */ "./src/sass/main.scss");\n\n__webpack_require__(/*! ./js/checkConnection.js */ "./src/js/checkConnection.js");\n\n__webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \\"./js/shareButton/js\\""); e.code = \'MODULE_NOT_FOUND\'; throw e; }()));\n\nvar _main = __webpack_require__(/*! ./js/main.js */ "./src/js/main.js");\n\nvar _main2 = _interopRequireDefault(_main);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar mainApp = new _main2.default();\nmainApp.init();\n\n//# sourceURL=webpack:///./src/app.js?')},"./src/js/checkConnection.js":
 /*!***********************************!*\
   !*** ./src/js/checkConnection.js ***!
   \***********************************/

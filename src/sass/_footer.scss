@@ -2,4 +2,19 @@
   background: $secondaryColor;
   color: $secondaryTextColor;
   padding: 1em;
+
+  a {
+    color: $secondaryTextColor;
+  }
+
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__widget {
+    @include desktop {
+      width: 33%;
+    }
+  }
 }
