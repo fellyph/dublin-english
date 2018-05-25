@@ -6,6 +6,10 @@
   top: 0;
   border-bottom: 3px solid #f4f4f4;
 
+  body.offline & {
+    filter: grayscale(100%);
+  }
+
   a {
     color: $secondaryTextColor;
     text-decoration: none;

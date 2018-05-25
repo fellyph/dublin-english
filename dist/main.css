@@ -5,6 +5,8 @@
   z-index: 100;
   top: 0;
   border-bottom: 3px solid #f4f4f4; }
+  body.offline .top-bar {
+    filter: grayscale(100%); }
   .top-bar a {
     color: #FFFFFF;
     text-decoration: none;
@@ -112,6 +114,31 @@ body {
   max-width: 100%;
   width: 970px;
   margin: 0 auto; }
+
+.link--mail,
+.link--call,
+.link--maps {
+  font-size: 1.1em; }
+  .link--mail:after,
+  .link--call:after,
+  .link--maps:after {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 0.5em;
+    background-size: contain;
+    background-repeat: no-repeat; }
+
+.link--call:after {
+  background-image: url(9585c52001d7cd9b3c02a32540da34ca.svg); }
+
+.link--mail::after {
+  background-image: url(53eaf419510de171348e743b566ee2ac.svg); }
+
+.btn--share {
+  background-image: url(e573ad3f7a1047efaaa8d23e7292a661.svg); }
 
 .footer {
   background: #f44336;

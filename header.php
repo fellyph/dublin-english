@@ -30,7 +30,7 @@
 <body <?php body_class(); ?>>
   <header class="top-bar">
     <div class="top-bar__contact">
-      <a href="tel:999999999" class="call">99 999 9999</a>
+      <a href="tel:999999999" class="link--call">99 999 9999</a>
     </div>
 
     <div class="top-bar__wrap">
