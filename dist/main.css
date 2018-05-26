@@ -115,13 +115,9 @@ body {
   width: 970px;
   margin: 0 auto; }
 
-.link--mail,
-.link--call,
-.link--maps {
+.link--mail, .link--call, .link--maps {
   font-size: 1.1em; }
-  .link--mail:after,
-  .link--call:after,
-  .link--maps:after {
+  .link--mail:after, .link--call:after, .link--maps:after {
     content: '';
     display: inline-block;
     width: 16px;
@@ -137,8 +133,16 @@ body {
 .link--mail::after {
   background-image: url(53eaf419510de171348e743b566ee2ac.svg); }
 
+.link--maps::after {
+  background-image: url(b3242e4ba5c1563c805e854983bdc3bf.svg); }
+
 .btn--share {
-  background-image: url(e573ad3f7a1047efaaa8d23e7292a661.svg); }
+  border: none;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 30px;
+  height: 30px;
+  background: url(505177d69ff0e2c4ed8a1ad37aa24513.svg) no-repeat; }
 
 .footer {
   background: #f44336;
@@ -152,6 +156,10 @@ body {
   @media (min-width: 1024px) {
     .footer__widget {
       width: 33%; } }
+  .footer__copyright {
+    margin-top: 1em;
+    text-align: center;
+    font-size: 0.7em; }
 
 .banner {
   display: flex;
@@ -225,11 +233,16 @@ body {
     font-size: 1.2em;
     font-family: 'Signika', sans-serif;
     text-align: center; }
+  .courseCard__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em 1em; }
+    .courseCard__footer .btn--share {
+      margin: 0.6em; }
   .courseCard__info {
     padding: 1em; }
   .courseCard .btn {
-    display: inline-block;
-    margin: 1em 0; }
+    display: inline-block; }
   @media (min-width: 1024px) {
     .courseCard {
       width: 33%; } }

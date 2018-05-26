@@ -36,9 +36,7 @@
     <div class="top-bar__wrap">
       <nav role="navigation">
         <div id="menuToggle">
-
           <input type="checkbox" />
-
           <span></span>
           <span></span>
           <span></span>

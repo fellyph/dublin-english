@@ -49,13 +49,22 @@
     text-align: center;
   }
 
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1em 1em;
+
+    .btn--share {
+      margin: 0.6em;
+    }
+  }
+
   &__info {
     padding: 1em;
   }
 
   .btn {
     display: inline-block;
-    margin: 1em 0;
   }
 
   @include desktop {

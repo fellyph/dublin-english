@@ -24,21 +24,26 @@ body {
   width: 970px;
   margin: 0 auto;
 }
-.link--mail,
-.link--call,
-.link--maps {
-  font-size: 1.1em;
-  &:after {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    margin-left: 0.5em;
-    background-size: contain;
-    background-repeat: no-repeat;
+
+.link {
+  &--mail,
+  &--call,
+  &--maps {
+    font-size: 1.1em;
+
+    &:after {
+      content: '';
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      vertical-align: middle;
+      margin-left: 0.5em;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
   }
 }
+
 
 .link--call:after {
   background-image: url('../imgs/call-icon.svg');
@@ -48,6 +53,15 @@ body {
   background-image: url('../imgs/mail-icon.svg');
 }
 
+.link--maps::after {
+  background-image: url('../imgs/map-icon.svg');
+}
+
 .btn--share {
-  background-image: url('../imgs/share-button.svg');
+  border: none;
+  overflow: hidden;
+  text-indent: -9999px;
+  width: 30px;
+  height: 30px;
+  background: url('../imgs/share-button.svg') no-repeat;
 }
