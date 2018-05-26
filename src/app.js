@@ -3,8 +3,10 @@ import './sass/main.scss'
 import './js/checkConnection.js'
 import Main from './js/main.js'
 import ShareButton from './js/shareButton.js'
+import MapsFallback from './js/fallbackMaps.js'
 
 const mainApp = new Main()
+const mapsFallback = new MapsFallback()
 const shareButtons = document.querySelectorAll('.btn--share')
 
 shareButtons.forEach((element) => {
@@ -13,3 +15,4 @@ shareButtons.forEach((element) => {
 })
 
 mainApp.init()
+mapsFallback.init()

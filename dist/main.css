@@ -163,11 +163,12 @@ body {
 
 .banner {
   display: flex;
-  min-height: 400px;
+  min-height: 440px;
   background: #2733b9;
   color: #FFFFFF;
   position: relative;
-  background-position: top center; }
+  background-position: top center;
+  padding-top: 50px; }
   .banner__column {
     width: 50%;
     display: inline-block; }
