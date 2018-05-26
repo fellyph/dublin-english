@@ -35,7 +35,7 @@ module.exports = {
     ]
   },
   plugins: [
-    new CleanPlugin('dist', 'fixscope.php'),
+    new CleanPlugin(['dist'], { root: __dirname, exclude: 'fixscope.php' }),
     new UglifyJsPlugin(),
     new ExtractTextPlugin('main.css'),
     new WorkboxPlugin.GenerateSW({

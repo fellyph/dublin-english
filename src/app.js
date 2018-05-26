@@ -1,8 +1,8 @@
 import './sass/main.scss'
+
 import './js/checkConnection.js'
 import Main from './js/main.js'
 import ShareButton from './js/shareButton.js'
-
 
 const mainApp = new Main()
 const shareButtons = document.querySelectorAll('.btn--share')
