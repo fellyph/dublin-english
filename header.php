@@ -6,8 +6,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>School English</title>
    <!--Import Google Icon Font-->
-   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="preconnect" crossorigin>
-   <link href="https://fonts.googleapis.com/css?family=Signika" rel="preconnect" crossorigin>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 
   <!-- PWA metadata -->

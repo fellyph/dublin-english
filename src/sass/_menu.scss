@@ -18,7 +18,7 @@
   }
 
   &__wrap {
-    padding: 0.8em 0.5em 0.8em 1em;
+    padding: 0.8em 1em;
     display: flex;
     justify-content: space-between;
   }
@@ -56,6 +56,11 @@
     display: inline-block;
     margin: 0;
     font-family: 'Signika', sans-serif;
+    font-size: 1.5em;
+
+    @include desktop {
+      font-size: 2em;
+    }
   }
 
   &__contact {

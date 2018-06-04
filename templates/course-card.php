@@ -1,9 +1,11 @@
 <article <?php post_class('courseCard')?>>
   <figure class="courseCard__thumbnail">
-    <?php the_post_thumbnail('card-size'); ?>
+    <a href="<?php the_permalink(); ?>">
+      <?php the_post_thumbnail('card-size'); ?>
+    </a>
   </figure>
   <div class="courseCard__info">
-    <h2 class="courseCard__title"><?php the_title(); ?></h2>
+    <h2 class="courseCard__title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
   </div>
   <footer class="courseCard__footer">
       <a href="/contact" class="btn">Get a quote</a>

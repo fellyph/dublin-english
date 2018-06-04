@@ -13,7 +13,7 @@
     text-transform: uppercase;
     letter-spacing: 0.07em; }
   .top-bar__wrap {
-    padding: 0.8em 0.5em 0.8em 1em;
+    padding: 0.8em 1em;
     display: flex;
     justify-content: space-between; }
   .top-bar__menu {
@@ -39,7 +39,11 @@
   .top-bar__site-logo {
     display: inline-block;
     margin: 0;
-    font-family: 'Signika', sans-serif; }
+    font-family: 'Signika', sans-serif;
+    font-size: 1.5em; }
+    @media (min-width: 1024px) {
+      .top-bar__site-logo {
+        font-size: 2em; } }
   .top-bar__contact {
     border-bottom: 1px solid #f4f4f4;
     text-align: right;
@@ -94,12 +98,15 @@
   #menuToggle input:checked ~ span:nth-last-child(2) {
     transform: rotate(-45deg) translate(0, -1px); }
 
-div, body, article, section, ul, nav, header, footer {
+div, body, article, section,
+ul, nav, header, footer,
+aside {
   box-sizing: border-box; }
 
 body {
   font-family: 'Roboto', sans-serif;
-  color: #777; }
+  color: #777;
+  background: #f2f2f2; }
 
 .btn {
   background: #f44336;
@@ -143,6 +150,10 @@ body {
   width: 30px;
   height: 30px;
   background: url(505177d69ff0e2c4ed8a1ad37aa24513.svg) no-repeat; }
+
+.wp-post-image {
+  max-width: 100%;
+  height: auto; }
 
 .footer {
   background: #f44336;
@@ -248,10 +259,27 @@ body {
     .courseCard {
       width: 33%; } }
 
+.course__content, .course__form {
+  max-width: 100%;
+  padding: 1em;
+  margin: 0.5em 0.5em 3em;
+  background: #FFFFFF; }
+
+@media (min-width: 1024px) {
+  .course__single {
+    display: flex; }
+  .course__form {
+    width: 30%; } }
+
 .post__item {
   margin: 2em auto;
   max-width: 100%;
-  width: 870px; }
+  width: 870px;
+  box-sizing: border-box; }
+
+.post__thumbnail {
+  font-size: 0;
+  display: inline-block; }
 
 .post__title {
   text-align: center;

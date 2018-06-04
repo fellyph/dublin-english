@@ -71,3 +71,27 @@
     width: 33%;
   }
 }
+
+.course {
+  &__content,
+  &__form {
+    max-width: 100%;
+    padding: 1em;
+    margin: 0.5em 0.5em 3em;
+    background: $secondaryTextColor;
+  }
+
+  &__form {
+
+  }
+
+  @include desktop {
+    &__single {
+      display: flex;
+    }
+
+    &__form {
+      width: 30%;
+    }
+  }
+}

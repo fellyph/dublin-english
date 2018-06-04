@@ -1,10 +1,13 @@
-div, body, article, section, ul, nav, header, footer {
+div, body, article, section,
+ul, nav, header, footer,
+aside {
   box-sizing: border-box;
 }
 
 body {
   font-family: 'Roboto', sans-serif;
   color: $textColor;
+  background: $mainBackground;
 }
 
 .btn {
@@ -64,4 +67,9 @@ body {
   width: 30px;
   height: 30px;
   background: url('../imgs/share-button.svg') no-repeat;
+}
+
+.wp-post-image {
+  max-width: 100%;
+  height: auto;
 }

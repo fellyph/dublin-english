@@ -23,7 +23,9 @@
     "url": "https://github.com/fellyph/dublin-english/issues"
   },
   "homepage": "https://github.com/fellyph/dublin-english#readme",
-  "dependencies": {},
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  },
   "devDependencies": {
     "babel-core": "^6.26.3",
     "babel-loader": "^7.1.4",

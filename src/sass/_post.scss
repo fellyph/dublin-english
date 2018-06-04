@@ -3,6 +3,12 @@
     margin: 2em auto;
     max-width: 100%;
     width: 870px;
+    box-sizing: border-box;
+  }
+
+  &__thumbnail {
+    font-size: 0;
+    display: inline-block;
   }
 
   &__title {
