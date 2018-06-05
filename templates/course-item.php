@@ -1,6 +1,6 @@
 <article <?php post_class('course__item')?>>
   <figure class="post__thumbnail">
-    <?php the_post_thumbnail('card-size'); ?>
+    <?php the_post_thumbnail('large'); ?>
   </figure>
     <h2 class="post__title"><?php the_title(); ?></h2>
     <div class="post__content">

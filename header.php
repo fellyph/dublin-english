@@ -44,6 +44,6 @@
               'menu_class' => 'top-bar__menu') ); ?>
         </div>
       </nav>
-      <h1 class="top-bar__site-logo"><?php bloginfo('name'); ?></h1>
+      <h1 class="top-bar__site-logo"><a href="<?php bloginfo('home') ?>"><?php bloginfo('name'); ?></a></h1>
     </div>
   </header>

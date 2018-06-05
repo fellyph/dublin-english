@@ -26,10 +26,8 @@
 }
 
 .courseCard {
-  border: 1px solid $borderColor;
   margin: 1em;
-  border-radius: 5px;
-
+  background: $secondaryTextColor;
   &__thumbnail {
     margin: 0;
     padding: 0;
@@ -42,11 +40,15 @@
 
   &__title {
     margin: 0 0 0.3em 0;
-    border-bottom: 1px solid $secondaryColor;
+    border-bottom: 1px solid $borderColor;
     padding-bottom: 0.5em;
     font-size: 1.2em;
     font-family: 'Signika', sans-serif;
     text-align: center;
+    a {
+      color: $primaryColor;
+      text-decoration: none;
+    }
   }
 
   &__footer {
@@ -82,7 +84,10 @@
   }
 
   &__form {
-
+    button, input, textarea {
+      margin-top: 0.3em;
+      max-width: 100%;
+    }
   }
 
   @include desktop {

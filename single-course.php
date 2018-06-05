@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-  <section class="course__single container">
+  <section class="course container">
       <div class="course__content">
         <?php
           while ( have_posts() ) : the_post();
