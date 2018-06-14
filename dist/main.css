@@ -4,7 +4,7 @@
   position: sticky;
   z-index: 100;
   top: 0;
-  border-bottom: 3px solid #f4f4f4; }
+  border-bottom: 3px solid #f2f2f2; }
   body.offline .top-bar {
     filter: grayscale(100%); }
   .top-bar a {
@@ -45,7 +45,7 @@
       .top-bar__site-logo {
         font-size: 2em; } }
   .top-bar__contact {
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid #f2f2f2;
     text-align: right;
     padding: 0.3em 1.3em 0.3em 0.3em; }
   @media (min-width: 1024px) {

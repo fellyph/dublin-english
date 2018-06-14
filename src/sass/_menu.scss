@@ -4,7 +4,7 @@
   position: sticky;
   z-index: 100;
   top: 0;
-  border-bottom: 3px solid #f4f4f4;
+  border-bottom: 3px solid $mainBackground;
 
   body.offline & {
     filter: grayscale(100%);
@@ -64,7 +64,7 @@
   }
 
   &__contact {
-    border-bottom: 1px solid #f4f4f4;
+    border-bottom: 1px solid $mainBackground;
     text-align: right;
     padding: 0.3em 1.3em 0.3em 0.3em;
   }
