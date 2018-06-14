@@ -120,7 +120,7 @@ body {
 .container {
   max-width: 100%;
   width: 970px;
-  margin: 0 auto; }
+  margin: 1em auto; }
 
 .link--mail, .link--call, .link--maps {
   font-size: 1.1em; }
@@ -197,7 +197,7 @@ body {
     font-family: 'Signika', sans-serif;
     color: #FFFFFF;
     font-size: 3em;
-    text-shadow: 2px 2px 2px #333;
+    text-shadow: 2px 2px 2px #252525;
     margin: 0 0 0.5em 0; }
     .banner__title:after {
       content: '';
@@ -303,3 +303,17 @@ body {
     height: 5px;
     border-radius: 3px;
     margin: 3px auto; }
+
+.course__form button,
+.course__form input,
+.course__form textarea {
+  background: #777;
+  color: #FFFFFF;
+  border: none;
+  padding: 0.5em;
+  box-sizing: border-box; }
+
+.course__form .wpcf7-submit {
+  background: #2733b9; }
+  .course__form .wpcf7-submit:hover {
+    background: #f44336; }

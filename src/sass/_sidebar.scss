@@ -1,0 +1,18 @@
+.course__form  {
+  button,
+  input,
+  textarea {
+    background: $textColor;
+    color: $secondaryTextColor;
+    border: none;
+    padding: 0.5em;
+    box-sizing: border-box;
+  }
+
+  .wpcf7-submit {
+    background: $primaryColor;
+    &:hover {
+      background: $secondaryColor
+    }
+  }
+}
